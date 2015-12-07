@@ -1,0 +1,18 @@
+<h1>{{questionsCtrl.question.question}}</h1>
+<h4>{{questionsCtrl.question.description}}</h4>
+
+<form name='questionsCtrl.answerForm'>
+	<span ng-show="questionsCtrl.answerForm.answer.$error.required && questionsCtrl.answerForm.answer.$touched">
+		Answer is required!
+	</span>
+	<span ng-show="questionsCtrl.answerForm.answer.$error.minlength && questionsCtrl.answerForm.answer.$touched">
+		Answer must be at least 5 characters!
+	</span>
+	
+	<br><br>
+	
+	Answer: <input type='text' name='answer' ng-model='questionsCtrl.newAnswer.answer' ng-required='true' ng-minlength='5'><br>
+	Supporting details for your answer (optional): <input type='text' ng-model='questionsCtrl.newAnswer.support'>
+	<input type='submit' ng-click='questionsCtrl.addAnswer(questionsCtrl.newAnswer)'>
+	<button><a href="#/home">Cancel</a></button>
+</form>

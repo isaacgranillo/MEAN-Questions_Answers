@@ -1,0 +1,17 @@
+<h1>New Question</h1>
+
+<form name='questionsCtrl.questionForm'>
+	<span ng-show="questionsCtrl.questionForm.question.$error.required && questionsCtrl.questionForm.question.$touched">
+		Question is required!
+	</span>
+	<span ng-show="questionsCtrl.questionForm.question.$error.minlength && questionsCtrl.questionForm.question.$touched">
+		Question must be at least 10 characters!
+	</span>
+	
+	<br><br>
+
+	Question: <input type='text' name='question' ng-model='questionsCtrl.newQuestion.question' ng-required='true' ng-minlength='10'><br>
+	Description (optional) <input type='text' ng-model='questionsCtrl.newQuestion.description'>
+	<input type='submit' ng-click='questionsCtrl.addQuestion(questionsCtrl.newQuestion)'>
+	<button><a href="#/home">Cancel</a></button>	
+</form>

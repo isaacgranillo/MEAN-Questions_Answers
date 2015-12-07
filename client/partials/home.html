@@ -1,0 +1,13 @@
+<input type='text' placeholder='Search' ng-model='filter_question'>
+	<table>
+		<tr>
+			<th>Question</th>
+			<th>Answers</th>
+			<th>Action</th>
+		</tr>	
+		<tr ng-repeat='question in questionsCtrl.questions | filter:filter_question | orderBy: "-created"'>
+			<td><span ng-bind='question.question'></span></td>
+			<td><span ng-bind='question.answers.length'></span></td>
+			<td><button ng-click='questionsCtrl.showQuestion(question._id)'>Show</button> | <button ng-click='questionsCtrl.answerQuestion(question._id)'>Answer</button></td>
+		</tr>
+	</table>

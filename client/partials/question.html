@@ -1,0 +1,19 @@
+<h1>{{questionsCtrl.question.fullinfo.question}}</h1>
+<h4>{{questionsCtrl.question.fullinfo.description}}</h4>
+
+<hr>
+
+<div ng-repeat='x in questionsCtrl.question.fullinfo.answers | orderBy: ["-like", "-created"]'>
+	<h3><span ng-bind = 'x.name'></span></h3>
+	<p><b><span ng-bind ='x.answer'></span></b> </p>
+	<p><i><span ng-bind = 'x.support'></span></i></p>
+	<p><span ng-bind = 'x.like'></span> Likes</p>
+	<button ng-click = 'questionsCtrl.addLike(x._id)'>Like</button>
+	<hr>
+</div>
+
+
+
+
+
+
