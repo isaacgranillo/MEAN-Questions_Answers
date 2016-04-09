@@ -10,8 +10,8 @@
 	
 	<br><br>
 
-	Question: <input type='text' name='question' ng-model='questionsCtrl.newQuestion.question' ng-required='true' ng-minlength='10'><br>
-	Description (optional) <input type='text' ng-model='questionsCtrl.newQuestion.description'>
-	<input type='submit' ng-click='questionsCtrl.addQuestion(questionsCtrl.newQuestion)'>
+	Question: <input type='text' name='question' ng-model='questionsCtrl.newQuestion.question' ng-required='true' ng-minlength='10' class='input'><br>
+	Description (optional): <input type='text' ng-model='questionsCtrl.newQuestion.description' class='input'>
+	<button><input type='submit' ng-click='questionsCtrl.addQuestion(questionsCtrl.newQuestion)' class="submit"></button>
 	<button><a href="#/home">Cancel</a></button>	
 </form>

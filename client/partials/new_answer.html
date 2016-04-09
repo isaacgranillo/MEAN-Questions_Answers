@@ -11,8 +11,8 @@
 	
 	<br><br>
 	
-	Answer: <input type='text' name='answer' ng-model='questionsCtrl.newAnswer.answer' ng-required='true' ng-minlength='5'><br>
-	Supporting details for your answer (optional): <input type='text' ng-model='questionsCtrl.newAnswer.support'>
-	<input type='submit' ng-click='questionsCtrl.addAnswer(questionsCtrl.newAnswer)'>
+	Answer: <input type='text' name='answer' ng-model='questionsCtrl.newAnswer.answer' ng-required='true' ng-minlength='5' class='input'><br>
+	Supporting details (optional): <input type='text' ng-model='questionsCtrl.newAnswer.support' class='input'>
+	<button><input type='submit' ng-click='questionsCtrl.addAnswer(questionsCtrl.newAnswer)' class='submit'></button>
 	<button><a href="#/home">Cancel</a></button>
 </form>
