@@ -36,7 +36,7 @@ table{
 tr, th, td{
 	text-align: center;
 	padding: 10px;
-	border: 2px solid #003d6c;
+	/*border: 2px solid #003d6c;*/
 	color: #003d6c;
 }
 
